@@ -3,13 +3,19 @@ package com.andres.springboot.di.app.springboot_di.repositories;
 import java.util.Arrays;
 import java.util.List;
 
+//import org.springframework.context.annotation.Primary;
 //import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+//import org.springframework.web.context.annotation.RequestScope;
+//import org.springframework.web.context.annotation.SessionScope;
 
 import com.andres.springboot.di.app.springboot_di.models.Product;
 
 //@Component
-@Repository
+//@Primary
+//@SessionScope //funciona con la session del navegador ejem carrito de compras
+//@RequestScope //una nueva session por request
+@Repository("productList")
 public class ProductRepositoryImpl implements ProductRepository {
 
     private List<Product> data;
